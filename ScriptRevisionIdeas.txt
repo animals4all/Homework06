@@ -1,0 +1,13 @@
+Changes to make script easier to manage:
+
+- In 'melons.py', create a dictionary to contain all of the dictionaries, with an item for each dictionary.
+For each item, put the melon trait that the item's dictionary lists as the key. For example, if the item's
+dictionary is 'melon_name', the item's key is 'Name'. For the item's value, put a tuple with the dictionary
+variable as the first part of the tuple and the unit for the melon's trait as the second part of the tuple
+(just leave a blank string if there is no unit).
+
+- In 'melon_info.py', just import the parent dictionary and the 'melon_name' dictionary instead of all the dictionaries. The print_melon function just takes the parent dictionary and a melon's key in the dictionaries (such as '1'). Instead of having one line to list all the melon traits, a 'for' loop goes through each item in the parent dictionary  and prints the item's key (the melon trait), the value in the item's dictionary at the melon's key, and the optional unit in this format:
+Price: 2.00 units
+
+- The 'for' loop at the bottom loops through 'melon_name.keys()' and passes the parent dictionary and the
+current key to 'print_melon' as the parameters.
